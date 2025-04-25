@@ -1,0 +1,52 @@
+#Problem Statement
+#Write a simple joke bot. The bot starts by asking the user what they want. However, your program will only respond to one response: Joke.
+
+#If the user enters Joke then we will print out a single joke. Each time the joke is always the same:
+
+#Here is a joke for you! Panaversity GPT - Sophia is heading out to the grocery store. A programmer tells her: get a liter of milk, and if they have eggs, get 12. Sophia returns with 13 liters of milk. The programmer asks why and Sophia replies: 'because they had eggs'
+
+#If the user enters anything else we print out:
+
+#Sorry I only tell jokes
+
+#You should use the three constants:
+
+#PROMPT JOKE SORRY
+
+#which contain the strings for the prompt asked to the user, the joke to print out if the user enters Joke and the sorry message if the user enters anything else.
+
+#Your program will need to use an if statement which checks if the user input is Joke:
+
+#if user_input == "Joke":
+
+#Recall that == is a comparison which tests if two values are equal to one another.
+
+#Here is a full run of the program (user input is in blue):
+
+#What do you want? Joke Here is a joke for you! Panaversity GPT - Sophia is heading out to the grocery store. A programmer tells her: get a liter of milk, and if they have eggs, get 12. Sophia returns with 13 liters of milk. The programmer asks why and Sophia replies: 'because they had eggs'
+
+
+#Solution
+#The solution to this problem is very simple. You will need to use the input function to get the user input and then use an if statement to check if the user input is Joke. If it is, you will print out the joke. If it is not, you will print out the sorry message.
+#You will also need to use the strip and lower methods to remove any leading or trailing whitespace and convert the user input to lowercase.
+
+PROMPT: str = "What do you want? "
+JOKE: str = "Here is a joke for you! Sophia is heading out to the grocery store. A programmer tells her: get a liter of milk, and if they have eggs, get 12. Sophia returns with 13 liters of milk. The programmer asks why and Sophia replies: 'because they had eggs'"
+SORRY: str = "Sorry I only tell jokes."
+
+def main():
+    # First, get user input
+    user_input = input(PROMPT)
+
+    # Then, clean the input
+    user_input = user_input.strip().lower()
+    
+    # Check if the user wants a joke
+    if "joke" in user_input:
+        print(JOKE)
+    else:
+        print(SORRY)
+
+if __name__ == "__main__":
+    main()
+# The code is complete and should work as expected. You can run the program and test it with different inputs to see how it behaves.
